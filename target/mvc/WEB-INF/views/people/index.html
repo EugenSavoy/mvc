@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymelife.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Люди</title>
+</head>
+<body>
+
+<!--/*@thymesVar id="people" type=""*/-->
+<div th:each="person : ${people}">
+    <a th:href = "@{/people/{id}(id = ${person.getId()})}" th:text = "${person.toString()}"></a>
+</div>
+
+<br/>
+<hr/>
+
+<a href="/people/new.html">Create new user</a>
+
+</body>
+</html>
